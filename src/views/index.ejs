@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Administrative units of Czech Republic API</title>
+    <style>
+      body {
+        width: 74ch;
+        margin: auto;
+        padding: 3rem 1rem;
+        font-family: system-ui, sans-serif;
+      }
+
+      h1 {
+        font-weight: normal;
+        margin-bottom: 3.5rem;
+      }
+
+      a {
+        color: #3a86ff;
+      }
+
+      .resources > h2 {
+        font-weight: 500;
+        margin-bottom: 0;
+      }
+
+      .resource {
+        margin-bottom: 1rem;
+      }
+
+      .resource > h3 {
+        font-weight: normal;
+        font-family: ui-monospace, "Cascadia Code";
+      }
+
+      .resource > h3,
+      .resource > p {
+        display: inline-block;
+        margin-bottom: 0.5rem;
+      }
+
+      .resource > code {
+        display: block;
+        background-color: #eff0f1;
+        color: #393318;
+        padding: 1em;
+        font-size: 0.875rem;
+        font-family: ui-monospace, "Cascadia Code", "Source Code Pro", Menlo,
+          Consolas, "DejaVu Sans Mono", monospace;
+        white-space: nowrap;
+        overflow-x: auto;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Administrative units of Czech Republic API</h1>
+    <p>
+      Welcome to your AWS serverless application. This example application has
+      several resources configured for you to explore.
+    </p>
+    <section class="resources">
+      <h2>Resources</h2>
+      <section class="resource">
+        <h3><a class="resource-example-link" href="/units">GET /units</a></h3>
+        <p>&nbsp;Returns a hierarchical tree of all units.</p>
+        <code
+          >curl <span><%= apiUrl %></span>/units -H 'accept:
+          application/json'</code
+        >
+      </section>
+
+      <section class="resource">
+        <h3>
+          <a class="resource-example-link" href="/search/bor"
+            >GET /search/:searchTerm</a
+          >
+        </h3>
+        <p>&nbsp;Do a fuzzy search and retrieve a list od matching units.</p>
+        <code
+          >curl <span><%= apiUrl %></span>/find/:unitName -H 'accept:
+          application/json'</code
+        >
+      </section>
+
+      <section class="resource">
+        <h3>
+          <a class="resource-example-link" href="/search/1"
+            >GET /search/:unitId</a
+          >
+        </h3>
+        <p>&nbsp;Retrieve a single unit by its unique ID.</p>
+        <code
+          >curl <span><%= apiUrl %></span>/users/1 -H 'accept:
+          application/json'</code
+        >
+      </section>
+
+      <section class="resource">
+        <h3>
+          <a class="resource-example-link" href="/random">GET /random</a>
+        </h3>
+        <p>&nbsp;Retrieve a random hierarchy</p>
+        <code
+          >curl <span><%= apiUrl %></span>/random -H 'accept:
+          application/json'</code
+        >
+      </section>
+    </section>
+  </body>
+</html>
